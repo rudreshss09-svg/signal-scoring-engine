@@ -1,0 +1,62 @@
+# Signal Scoring Engine configuration.
+# Everything tunable lives here. The code never hardcodes weights, thresholds or ICP rules.
+# All values are illustrative defaults for a synthetic demo, not calibrated benchmarks.
+
+# Scores are computed relative to this fixed date so runs are reproducible.
+# Override at runtime with: signal-score rank --as-of YYYY-MM-DD
+as_of = 2026-10-01
+
+[freshness]
+# Signals older than this many days are considered stale and contribute nothing.
+# An account with no signal inside this window is rejected by the freshness gate.
+max_signal_age_days = 120
+
+# Each signal type: base weight (points at age 0) and half-life in days.
+# Decayed value = weight * 0.5 ** (age_days / half_life_days)
+[signals.funding_round]
+weight = 30.0
+half_life_days = 90
+description = "Announced a new funding round"
+
+[signals.sdr_job_posting]
+weight = 25.0
+half_life_days = 30
+description = "Posted an SDR or BDR role"
+
+[signals.new_sales_leader]
+weight = 20.0
+half_life_days = 60
+description = "Hired a new VP or Head of Sales"
+
+[signals.headcount_growth]
+weight = 12.0
+half_life_days = 45
+description = "Go-to-market headcount grew quarter over quarter"
+
+[signals.tech_stack_change]
+weight = 8.0
+half_life_days = 30
+description = "Added or replaced a GTM tool (for example a new CRM)"
+
+# Combination bonuses: awarded once when ALL listed signal types are present
+# among an account's fresh signals. Signals together are more predictive than alone.
+[[combinations]]
+name = "funded_and_hiring_sdrs"
+signals = ["funding_round", "sdr_job_posting"]
+bonus = 15.0
+
+[[combinations]]
+name = "new_leader_building_team"
+signals = ["new_sales_leader", "sdr_job_posting"]
+bonus = 10.0
+
+[icp]
+industries = ["B2B SaaS"]
+min_employees = 20
+max_employees = 250
+regions = ["North America", "Europe", "India"]
+
+[tool_conflict]
+# Tech stack categories that mean the account already runs an outbound motion,
+# so a "first outbound hire" play is a poor fit.
+conflicting_tools = ["sales_engagement_platform", "outbound_agency"]

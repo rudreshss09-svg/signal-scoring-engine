@@ -1,0 +1,169 @@
+{
+  "_note": "Synthetic demo data. All companies, domains and signals are fictional.",
+  "accounts": [
+    {
+      "account_id": "ACC-001",
+      "company_name": "Lumenfold",
+      "domain": "lumenfold.example",
+      "industry": "B2B SaaS",
+      "employee_count": 85,
+      "region": "North America",
+      "tech_stack": ["crm", "product_analytics"],
+      "signals": [
+        {"type": "funding_round", "observed_at": "2026-09-10", "detail": "Series A announced"},
+        {"type": "sdr_job_posting", "observed_at": "2026-09-22", "detail": "Posted first SDR role"},
+        {"type": "headcount_growth", "observed_at": "2026-08-15", "detail": "GTM team grew from 6 to 9"}
+      ]
+    },
+    {
+      "account_id": "ACC-002",
+      "company_name": "Quarrystack",
+      "domain": "quarrystack.example",
+      "industry": "B2B SaaS",
+      "employee_count": 140,
+      "region": "Europe",
+      "tech_stack": ["crm", "data_warehouse"],
+      "signals": [
+        {"type": "new_sales_leader", "observed_at": "2026-08-20", "detail": "Hired first VP of Sales"},
+        {"type": "sdr_job_posting", "observed_at": "2026-09-05", "detail": "Posted two BDR roles"}
+      ]
+    },
+    {
+      "account_id": "ACC-003",
+      "company_name": "Bramblepath Analytics",
+      "domain": "bramblepath.example",
+      "industry": "B2B SaaS",
+      "employee_count": 60,
+      "region": "India",
+      "tech_stack": ["crm"],
+      "signals": [
+        {"type": "funding_round", "observed_at": "2026-07-01", "detail": "Seed extension announced"},
+        {"type": "tech_stack_change", "observed_at": "2026-09-25", "detail": "Migrated to a new CRM"}
+      ]
+    },
+    {
+      "account_id": "ACC-004",
+      "company_name": "Tidewell",
+      "domain": "tidewell.example",
+      "industry": "B2B SaaS",
+      "employee_count": 35,
+      "region": "North America",
+      "tech_stack": ["product_analytics"],
+      "signals": [
+        {"type": "headcount_growth", "observed_at": "2026-09-12", "detail": "Sales headcount doubled this quarter"}
+      ]
+    },
+    {
+      "account_id": "ACC-005",
+      "company_name": "Cobaltline",
+      "domain": "cobaltline.example",
+      "industry": "B2B SaaS",
+      "employee_count": 110,
+      "region": "Europe",
+      "tech_stack": ["crm", "data_warehouse"],
+      "signals": [
+        {"type": "sdr_job_posting", "observed_at": "2026-06-20", "detail": "Posted SDR role, still open"},
+        {"type": "new_sales_leader", "observed_at": "2026-07-15", "detail": "New Head of Sales joined"}
+      ]
+    },
+    {
+      "account_id": "ACC-006",
+      "company_name": "Fernhollow",
+      "domain": "fernhollow.example",
+      "industry": "Consumer Apps",
+      "employee_count": 70,
+      "region": "North America",
+      "tech_stack": ["product_analytics"],
+      "signals": [
+        {"type": "funding_round", "observed_at": "2026-09-01", "detail": "Series A announced"}
+      ]
+    },
+    {
+      "account_id": "ACC-007",
+      "company_name": "Kestrel Ledger",
+      "domain": "kestrelledger.example",
+      "industry": "B2B SaaS",
+      "employee_count": 1200,
+      "region": "North America",
+      "tech_stack": ["crm", "sales_engagement_platform"],
+      "signals": [
+        {"type": "sdr_job_posting", "observed_at": "2026-09-18", "detail": "Posted 12 SDR roles"},
+        {"type": "new_sales_leader", "observed_at": "2026-08-30", "detail": "New CRO announced"}
+      ]
+    },
+    {
+      "account_id": "ACC-008",
+      "company_name": "Orrin Metrics",
+      "domain": "orrinmetrics.example",
+      "industry": "B2B SaaS",
+      "employee_count": 95,
+      "region": "Europe",
+      "tech_stack": ["crm", "sales_engagement_platform"],
+      "signals": [
+        {"type": "headcount_growth", "observed_at": "2026-09-08", "detail": "GTM team grew from 10 to 14"}
+      ]
+    },
+    {
+      "account_id": "ACC-009",
+      "company_name": "Plinthware",
+      "domain": "plinthware.example",
+      "industry": "B2B SaaS",
+      "employee_count": 75,
+      "region": "India",
+      "tech_stack": ["crm", "outbound_agency"],
+      "signals": [
+        {"type": "funding_round", "observed_at": "2026-09-20", "detail": "Series A announced"},
+        {"type": "sdr_job_posting", "observed_at": "2026-09-26", "detail": "Posted first SDR role"}
+      ]
+    },
+    {
+      "account_id": "ACC-010",
+      "company_name": "Sablecrest",
+      "domain": "sablecrest.example",
+      "industry": "B2B SaaS",
+      "employee_count": 45,
+      "region": "North America",
+      "tech_stack": ["crm"],
+      "signals": []
+    },
+    {
+      "account_id": "ACC-011",
+      "company_name": "Vantorra",
+      "domain": "vantorra.example",
+      "industry": "B2B SaaS",
+      "employee_count": 130,
+      "region": "Europe",
+      "tech_stack": ["crm", "product_analytics"],
+      "signals": [
+        {"type": "funding_round", "observed_at": "2026-03-10", "detail": "Series B announced"},
+        {"type": "sdr_job_posting", "observed_at": "2026-04-02", "detail": "Posted SDR role, since closed"}
+      ]
+    },
+    {
+      "account_id": "ACC-012",
+      "company_name": "Wexmoor",
+      "domain": "wexmoor.example",
+      "industry": "B2B SaaS",
+      "employee_count": 50,
+      "region": "India",
+      "tech_stack": ["crm"],
+      "signals": [
+        {"type": "tech_stack_change", "observed_at": "2026-09-28", "detail": "Added a product analytics tool"},
+        {"type": "sdr_job_posting", "observed_at": "2026-10-15", "detail": "Posted first SDR role"}
+      ]
+    },
+    {
+      "account_id": "ACC-013",
+      "company_name": "Glintmere",
+      "domain": "glintmere.example",
+      "industry": "B2B SaaS",
+      "employee_count": 90,
+      "region": "Latin America",
+      "tech_stack": ["crm"],
+      "signals": [
+        {"type": "funding_round", "observed_at": "2026-09-14", "detail": "Series A announced"},
+        {"type": "sdr_job_posting", "observed_at": "2026-09-24", "detail": "Posted first SDR role"}
+      ]
+    }
+  ]
+}
